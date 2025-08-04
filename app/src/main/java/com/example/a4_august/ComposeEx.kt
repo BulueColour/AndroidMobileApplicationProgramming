@@ -120,6 +120,9 @@ fun Quadrant() {
                 Text(
                     text = stringResource(R.string.BottomRight)
                 )
+                Text(
+                    text = "Domon"
+                )
             }
         }
     }
