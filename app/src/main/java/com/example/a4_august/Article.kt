@@ -28,7 +28,7 @@ fun Article() {
                 text = "Jetpack Compose Tutorial",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(start = 16.dp, end = 16.dp) //padding สามารถ custom ได้ ซึ่งมี start, end, top, bottom
+                modifier = Modifier.padding(top = 16.dp, start = 16.dp, end = 16.dp) //padding สามารถ custom ได้ ซึ่งมี start, end, top, bottom
             )
             Text(
                 text = stringResource(R.string.SecondParagraph), //เก็บข้อความอยู๋ใน res/values/strings.xml
