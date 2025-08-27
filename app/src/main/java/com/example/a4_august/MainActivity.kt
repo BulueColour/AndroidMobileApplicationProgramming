@@ -64,11 +64,11 @@ fun Greeting(message: String, from: String, modifier: Modifier = Modifier) { //�
 
 @Composable
 fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) { //การเรียกใช้รูปภาพ
-    val image = painterResource(id = R.drawable.androidparty)
+    val img = painterResource(id = R.drawable.androidparty)
     Box(
         modifier.fillMaxSize()
     ) {
-        Image(painter = image, contentDescription = null)
+        Image(painter = img, contentDescription = null)
         Greeting(message = message, from = from)
     }
 }

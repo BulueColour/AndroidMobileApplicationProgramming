@@ -14,7 +14,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
@@ -24,6 +23,8 @@ import androidx.compose.ui.unit.sp
 import com.example.a4_august.ui.theme._4_AugustTheme
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.layout.ContentScale
 
 class BulueColour : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) { //ทำงานตรงนี้
@@ -49,7 +50,7 @@ fun Card(message: String, from: String, modifier: Modifier = Modifier) { //ก�
             text = message,
             fontSize = 80.sp,
             lineHeight = 116.sp,
-            textAlign = TextAlign.Left, //ใช้จัดตำแหน่งข้อความ (เช่น center ให้อยู่กลาง)
+            textAlign = TextAlign.Center, //ใช้จัดตำแหน่งข้อความ (เช่น center ให้อยู่กลาง)
             modifier = modifier // ใช้จัดการ layout การตกแต่งต่างๆ
         )
         Text(
@@ -57,18 +58,30 @@ fun Card(message: String, from: String, modifier: Modifier = Modifier) { //ก�
             fontSize = 18.sp,
             modifier = Modifier
                 .padding(16.dp)
-                .align(alignment = Alignment.End)
+                .align(Alignment.End)
+        )
+        Text(
+            text = "62050237 Sittipong buntean",
+            fontSize = 14.sp,
+            modifier = Modifier
+                .padding(16.dp)
+                .align(Alignment.End)
         )
     }
 }
 
 @Composable
 fun CardImage(message: String, from: String, modifier: Modifier = Modifier) {
-    val image = painterResource(id = R.drawable.androidparty)
+    val img = painterResource(id = R.drawable.corgi_smile) // ใส่รูปคอร์กี้
     Box(
         modifier.fillMaxSize()
     ) {
-        Image(painter = image, contentDescription = null)
+        Image(
+            painter = img,
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
         Card(message = message, from = from)
     }
 }
@@ -80,7 +93,7 @@ fun CardPreview() {
         modifier = Modifier.background(color = MaterialTheme.colorScheme.background)
     ) {
         _4_AugustTheme {
-            GreetingImage("Happy birthday", "It's your day, enjoy!")
+            CardImage("Happy birthday", "It's your day, enjoy!")
         }
     }
 }
