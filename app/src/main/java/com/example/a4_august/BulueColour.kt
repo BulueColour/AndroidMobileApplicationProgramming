@@ -39,7 +39,7 @@ class BulueColour : ComponentActivity() {
 }
 
 @Composable
-fun Card(message: String, from: String, modifier: Modifier = Modifier) { //การสร้างฟังก์ชันด้วย jet compose
+fun Paper(message: String, from: String, modifier: Modifier = Modifier) { //การสร้างฟังก์ชันด้วย jet compose
     Column(
         verticalArrangement = Arrangement.Center, //ใช้เพื่อจัดให้อยู่ตรงกลาง
         modifier = Modifier
@@ -71,7 +71,7 @@ fun Card(message: String, from: String, modifier: Modifier = Modifier) { //ก�
 }
 
 @Composable
-fun CardImage(message: String, from: String, modifier: Modifier = Modifier) {
+fun PaperImage(message: String, from: String, modifier: Modifier = Modifier) {
     val img = painterResource(id = R.drawable.corgi_smile) // ใส่รูปคอร์กี้
     Box(
         modifier.fillMaxSize()
@@ -88,12 +88,12 @@ fun CardImage(message: String, from: String, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun CardPreview() {
+fun PaperPreview() {
     Surface(
         modifier = Modifier.background(color = MaterialTheme.colorScheme.background)
     ) {
         _4_AugustTheme {
-            CardImage("Happy birthday", "It's your day, enjoy!")
+            PaperImage("Happy birthday", "It's your day, enjoy!")
         }
     }
 }
