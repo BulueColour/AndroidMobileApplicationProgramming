@@ -69,7 +69,7 @@ fun BirthdayCardApp() { //สร้างฟอร์มเพื่อกรอ
 }
 
 @Composable
-fun InputScreen(
+fun InputScreen( // ฟอร์มที่ใช้ในการกรอกและส่งข้อมูลไปแสดง
     name: String,
     date: String,
     from: String,
@@ -174,9 +174,8 @@ fun InputScreen(
     }
 }
 
-// ใช้ฟังก์ชัน Card เดิมจาก BulueColour.kt
 @Composable
-fun Card(message: String, from: String, modifier: Modifier = Modifier) {
+fun Card(message: String, from: String, modifier: Modifier = Modifier) { //การ์ดอวยพรวันเกิด
     Column(
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
@@ -208,7 +207,7 @@ fun Card(message: String, from: String, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun CardImage(message: String, from: String, modifier: Modifier = Modifier) {
+fun CardImage(message: String, from: String, modifier: Modifier = Modifier) { //เอารูปมาแสดง
     val img = painterResource(id = R.drawable.corgi_smile)
     Box(
         modifier.fillMaxSize()
@@ -225,7 +224,7 @@ fun CardImage(message: String, from: String, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun MidtermPreview() {
+fun MidtermPreview() { //แสดงหน้าฟอร์ม
     _4_AugustTheme {
         BirthdayCardApp()
     }
@@ -233,7 +232,7 @@ fun MidtermPreview() {
 
 @Preview(showBackground = true)
 @Composable
-fun CardPreview() {
+fun CardPreview() { //แสดงหน้าการ์ด
     Surface(
         modifier = Modifier.background(color = MaterialTheme.colorScheme.background)
     ) {
