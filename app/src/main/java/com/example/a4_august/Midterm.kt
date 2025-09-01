@@ -21,6 +21,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 
 class Midterm : ComponentActivity() {
@@ -36,7 +37,7 @@ class Midterm : ComponentActivity() {
 }
 
 @Composable
-fun BirthdayCardApp() {
+fun BirthdayCardApp() { //สร้างฟอร์มเพื่อกรอกข้อมูลแล้วส่วนไปแสดงหน้า screen
     var currentScreen by remember { mutableStateOf("input") }
     var name by remember { mutableStateOf("") }
     var date by remember { mutableStateOf("") }
@@ -59,7 +60,6 @@ fun BirthdayCardApp() {
             )
         }
         "card" -> {
-            // ใช้ฟังก์ชัน Card ที่มีอยู่แล้ว แต่ส่งข้อมูลจาก InputScreen
             Card(
                 message = "Happy Birthday\n$name!",
                 from = "Date: $date\nFrom: $from"
@@ -85,7 +85,7 @@ fun InputScreen(
         verticalArrangement = Arrangement.Center
     ) {
         Text(
-            text = "Create Birthday Card",
+            text = stringResource(R.string.firstPageTitle),
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Black,
@@ -96,7 +96,7 @@ fun InputScreen(
         )
 
         Text(
-            text = "Happy Birthday to:",
+            text = stringResource(R.string.firstBulletTitle),
             fontSize = 16.sp,
             color = Color.Black,
             modifier = Modifier.padding(bottom = 8.dp)
@@ -116,7 +116,7 @@ fun InputScreen(
         )
 
         Text(
-            text = "Date:",
+            text = stringResource(R.string.secondBulletTitle),
             fontSize = 16.sp,
             color = Color.Black,
             modifier = Modifier.padding(bottom = 8.dp)

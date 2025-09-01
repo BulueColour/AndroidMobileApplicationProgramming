@@ -6,4 +6,7 @@
     <string name="TopRight">Creates a composable that lays out and draws a given Painter class object.</string>
     <string name="BottomLeft">A layout composable that places its children in a horizontal sequence.</string>
     <string name="BottomRight">A layout composable that places its children in a vertical sequence.</string>
+    <string name="firstPageTitle">Create Birthday Card</string>
+    <string name="firstBulletTitle">Happy Birthday to:</string>
+    <string name="secondBulletTitle">Date:</string>
 </resources>
