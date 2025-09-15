@@ -82,7 +82,7 @@ fun PaperImage(message: String, from: String, modifier: Modifier = Modifier) {
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
-        Card(message = message, from = from)
+        Paper(message = message, from = from)
     }
 }
 
